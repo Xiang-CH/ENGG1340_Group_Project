@@ -5,7 +5,7 @@ Team members:
 1. Xiang Chen 3035951868
 2. Ruiyi Lin  3035948419
 
-
+\n\n
 
 Project Proposal:
 
@@ -25,45 +25,45 @@ Which will also make this chess game more 'balance' to some extent.
 
   - After 4 rounds, before the next player start placing, the computer will randomly swap 2 gos (of difference team).
 
-
+\n\n
 **Features**
 
-void init_board() - Code Requirement 1 & 2
-  // For intializing the board will x row and column demanding on a user input
-  // Randomly place the three go
-int num_guess() - Code Requirement 1
-  // Randomly generates a number between 0 and 99
-  // Promote players to enter a number
-  // return the player with the closer guess
-  
-void place_go(int x, int y) 
-  // For placing the go on the board
-  // Input are the x and y coordinated of where to place 
-  
-bool judge(int x, int y) - Code Requirement 5
-  // For judgeing if their is five in a row
-  // Input are the x and y coordinated of where the go is placed
-  // Outputs whether win or not
-  bool judge_horizontal(int x, int y)
-    // Helper function for the judge function, see if five in a row in the horizontal direction
-    // Input are the x and y coordinated of where the go is placed
-    // Outputs whether their is five in a row
-  bool judge_vertical(int x, int y)
-    // Helper function for the judge function, see if five in a row in the vertical direction
-    // Input are the x and y coordinated of where the go is placed
-    // Outputs whether their is five in a row
-  bool judge_diagonal(int x, int y)
-    // Helper function for the judge function, see if five in a row in the diagonal direction
-    // Input are the x and y coordinated of where the go is placed
-    // Outputs whether their is five in a row
-  
-void switch() - Code Requirement 5
-  // Switches two go that are of different kinds
- 
-void save_game() - Code Requirement 4 & 5
-  // save the current state of the board to a text file
-void load_game() - Code Requirement 4 & 5
-  // load the board data in the text file into the current board
+void init_board() - Code Requirement 1 & 2 \n
+  // For intializing the board will x row and column demanding on a user input \n
+  // Randomly place the three go \n
+int num_guess() - Code Requirement 1\n
+  // Randomly generates a number between 0 and 99\n
+  // Promote players to enter a number\n
+  // return the player with the closer guess\n
+  \n
+void place_go(int x, int y) \n
+  // For placing the go on the board\n
+  // Input are the x and y coordinated of where to place \n
+  \n
+bool judge(int x, int y) - Code Requirement 5\n
+  // For judgeing if their is five in a row\n
+  // Input are the x and y coordinated of where the go is placed\n
+  // Outputs whether win or not\n
+  bool judge_horizontal(int x, int y)\n
+    // Helper function for the judge function, see if five in a row in the horizontal direction\n
+    // Input are the x and y coordinated of where the go is placed\n
+    // Outputs whether their is five in a row\n
+  bool judge_vertical(int x, int y)\n
+    // Helper function for the judge function, see if five in a row in the vertical direction\n
+    // Input are the x and y coordinated of where the go is placed\n
+    // Outputs whether their is five in a row\n
+  bool judge_diagonal(int x, int y)\n
+    // Helper function for the judge function, see if five in a row in the diagonal direction\n
+    // Input are the x and y coordinated of where the go is placed\n
+    // Outputs whether their is five in a row\n
+  \n
+void switch() - Code Requirement 5\n
+  // Switches two go that are of different kinds\n
+ \n
+void save_game() - Code Requirement 4 & 5\n
+  // save the current state of the board to a text file\n
+void load_game() - Code Requirement 4 & 5\n
+  // load the board data in the text file into the current board\n
 
 
 
