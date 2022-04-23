@@ -29,10 +29,11 @@ Which will also make this chess game more 'balance' to some extent.
 
 **Features**
 
-- void init_board() - Code Requirement 1 & 2 
+- void init_board() - Code Requirement 1 & 2 & 3
 
- 	- For intializing the board will x row and column demanding on a user input 
+ 	- For intializing the board will x row and column demanding on a user input as a dynamic array, 
   - Randomly place the three go 
+  
   
 - int num_guess() - Code Requirement 1
 
