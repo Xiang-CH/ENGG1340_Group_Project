@@ -1,6 +1,6 @@
 // board.h
-#ifndef board.h
-#define board.h
+#ifndef board_h
+#define board_h
 
 // Function: Prompt user for their desired weidth and height of board
 // Input: w(by reference): width of board.  h(by reference): height of board
