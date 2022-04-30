@@ -1,6 +1,11 @@
 // board.h
 #ifndef board_h
 #define board_h
+#include <iostream>
+#include <cstdlib>//rand number generate 
+#include <ctime>//call current use for srand()
+
+using namespace std ; 
 
 // Function: Prompt user for their desired weidth and height of board
 // Input: w(by reference): width of board.  h(by reference): height of board
