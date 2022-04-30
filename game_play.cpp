@@ -1,0 +1,49 @@
+//game_play.cpp
+#include "game_play.h"
+
+
+
+//pass   two player in this function 
+//change the element in two struct 
+void addPlayer(Player &player1 , Player &player2){
+    string name ; 
+    string id ; 
+    cout<<"Player 1: please enter your preference name :) and also player id"<<endl;
+    cout<<"Name: ";
+    cin>> name ; 
+    cout<<endl;
+    player1.name = name ; 
+    cout<<"Id: ";
+    cin>>id; 
+    cout<<endl; 
+    player2.id = id ; 
+}
+
+//Function: Randomly generates a number between 0 and 99 and promote players to enter a number
+//Output: Return the player with the closer guess
+void num_guess(Player &player1 , Player &player2){
+    int number1 , number2 ; 
+    srand(time(NULL));//randomise
+    int guessnumber = rand()%100 ; 
+    cout<<"guess time!!! who enter the number close to the random number ranged from 0 to 99 will go first";
+    cout<<player1.name<<"please enter a number between 0 to 99";
+    cin>>number1;
+    while(cin.fail()){
+        cout<<"please enter a integer"<<endl;
+        cin.clear();
+        cin>>number1;
+    }
+    //calculate difference part........
+
+    
+
+
+}
+
+//Funtion: Place go on the board at location row x and column y
+//Input: x,y: the cooridinates to place go.   go: the type of go (X or O)
+void place_go(int x, int y, char go);
+
+//Function: Switch the current player
+//Input: current_player: the current player.  go: the type of go (X or O) for the current player
+void switch_player(char &currentGo, Player current_player);

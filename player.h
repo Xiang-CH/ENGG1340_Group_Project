@@ -2,10 +2,11 @@
 #ifndef player_h
 #define player_h
 #include <string>
+using namespace std; 
 
 struct Player{
-    std::string name;
-    int id; 
+    string name;
+    string id; 
     char go;
 };
 
