@@ -19,7 +19,7 @@ void num_guess(Player &player1 , Player &player2);
 
 //Funtion: Place go on the board at location row x and column y
 //Input: x,y: the cooridinates to place go.   go: the type of go (X or O)
-void place_go(int x, int y, char go);
+void place_go(char **gameboard, char go, int width , int height);
 
 //Function: Switch the current player
 //Input: current_player: the current player.  go: the type of go (X or O) for the current player

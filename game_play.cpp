@@ -76,8 +76,35 @@ void num_guess(Player &player1 , Player &player2){
 }
 
 //Funtion: Place go on the board at location row x and column y
-//Input: x,y: the cooridinates to place go.   go: the type of go (X or O)
-void place_go(int x, int y, char go);
+//Input: x,y: the coordinates to place go.   go: the type of go (X or O)
+void place_go(char **gameboard, char go, int width , int height ){
+    int x , y ; 
+    cout<<"please enter the x, y Coordinates in the board";
+    while(true){
+        cout<<"enter x coordinate: ";
+        cin>> x;
+        while(cin.fail() or x < 0 or x >= width ){
+            cout<<"please enter a valid int";
+            cin.clear();
+            cin>>x; 
+        }
+        cout<<"enter y coordinate: ";
+        cin>> y ;
+        while(cin.fail() or y < 0 or y >= height ){
+            cout<<"please enter a valid int";
+            cin.clear();
+            cin>>y; 
+        }
+        if(gameboard[y][x]!=' '){
+            cout<<"this position is occupied"<<endl;
+            continue;
+        }
+        else{
+            gameboard[y][x]= go;
+            break;
+        }
+    }
+}
 
 //Function: Switch the current player
 //Input: current_player: the current player.  go: the type of go (X or O) for the current player
