@@ -6,7 +6,7 @@ using namespace std;
 
 struct Player{
     string name;
-    string id; 
+    int id;
     char go;
 };
 

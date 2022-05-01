@@ -2,21 +2,19 @@
 #include "game_play.h"
 
 
-
-//pass   two player in this function 
+//pass two player in this function
 //change the element in two struct 
-void addPlayer(Player &player1 , Player &player2){
+void addPlayers(Player &player1 , Player &player2){
     string name ; 
-    string id ; 
-    cout<<"Player 1: please enter your preference name :) and also player id"<<endl;
-    cout<<"Name: ";
-    cin>> name ; 
-    cout<<endl;
-    player1.name = name ; 
-    cout<<"Id: ";
-    cin>>id; 
-    cout<<endl; 
-    player2.id = id ; 
+
+    cout << "Player 1: please enter your preferred name: ";
+    cin >> name ;
+    player1.name = name ;
+
+    cout << "Player 2: please enter your preferred name: ";
+    cin >> name ;
+    cout << endl;
+    player2.name = name ;
 }
 
 //Function: Randomly generates a number between 0 and 99 and promote players to enter a number
@@ -25,33 +23,35 @@ void num_guess(Player &player1 , Player &player2){
     int number1 , number2 ; 
     srand(time(NULL));//randomise
     int guessnumber = rand()%100 ; 
-    cout<<"guess time!!! who enter the number close to the random number ranged from 0 to 99 will go first";
-    cout<<player1.name<<"please enter a number between 0 to 99";
+    cout<<"Number guess time!!! \nWho ever guesses a number closer to the random number ranging from 0 to 99 will goes first" << endl;
+    cout<<player1.name<<" please enter a number between 0 to 99: ";
     cin>>number1;
     //input check
-    while(cin.fail()){
-        cout<<"please enter a integer"<<endl;
-        cin.clear();//clear input buffer 
+    while(cin.fail() or number1 < 0 or number1 > 99){
+        cout<<"please enter a valid number (0-99): ";
+        cin.clear();//clear input buffer
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin>>number1;
     }
-    cout<<player2.name<<"please enter a number between 0 to 99";
+    cout<<player2.name<<"please enter a number between 0 to 99: ";
     cin>>number2;
-    while(cin.fail()){
-        cout<<"please enter a integer"<<endl;
-        cin.clear();//clear input buffer 
+    while(cin.fail() or number2 < 0 or number2 > 99){
+        cout<<"please enter a valid number (0-99): ";
+        cin.clear();//clear input buffer
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin>>number2;
     }
     //calculate difference part........
     number1 = abs(number1 - guessnumber);
-    number2 =abs(number2-guessnumber); 
+    number2 = abs(number2-guessnumber);
     if(number1<number2){
-        cout<<player1.name<<"go first with O"<<endl;
+        cout<<player1.name<<" plays first with O"<<endl;
         player1.go='O';
         player2.go='X';
 
     }
     else if(number1 > number2){
-        cout<<player2.name<<"go first with O"<<endl;
+        cout<<player2.name<<" plays first with O"<<endl;
         player2.go='O';
         player1.go='X';
 
@@ -61,12 +61,12 @@ void num_guess(Player &player1 , Player &player2){
         cout<<"same guess,random start"<<endl;
         start = rand()%2 ; 
         if(start == 0 ){
-            cout<<player1.name<<"start first with O"<<endl;
+            cout<<player1.name<<" plays first with O"<<endl;
             player1.go='O';
             player2.go='X';
         }
         else{
-            cout<<player2.name<<"start first with O"<<endl;
+            cout<<player2.name<<" plays first with O"<<endl;
             player2.go='O';
             player1.go='X';
         }
@@ -75,11 +75,11 @@ void num_guess(Player &player1 , Player &player2){
     
 }
 
-//Funtion: Place go on the board at location row x and column y
+//Function: Place go on the board at location row x and column y
 //Input: x,y: the coordinates to place go.   go: the type of go (X or O)
-void place_go(char **gameboard, char go, int width , int height ){
+void place_go(char **gameboard, char go, int width , int height, Player current_player ){
     int x , y ; 
-    cout<<"please enter the x, y Coordinates in the board";
+    cout<< current_player.name << "'s round, please place go" << endl;
     while(true){
         cout<<"enter x coordinate: ";
         cin>> x;
