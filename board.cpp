@@ -55,11 +55,17 @@ void init_board(int x, int y, char **gameBoard){
 // Input: x: width of board.  y: height of board.   gameBoard: 2D array of board
 void print_board(int w, int h, char **gameBoard){
     //some pattern around the board need to be added
+    cout << " x  ";
+    for (int i=0; i < w; i++){
+        cout << i << "   ";
+    }
+    cout << endl << "y";
     for(int row = 0 ; row < h ; row++){
-        cout<<"                         "<<endl;
+        cout << "\n" << row << "   ";
         for(int column = 0 ; column < w ; column++){
             cout<<gameBoard[row][column]<<"   ";
         }
         cout<<endl;
     }
+
 }
