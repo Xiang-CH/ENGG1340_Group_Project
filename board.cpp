@@ -57,11 +57,22 @@ void print_board(int w, int h, char **gameBoard){
     //some pattern around the board need to be added
     cout << " x  ";
     for (int i=0; i < w; i++){
-        cout << i << "   ";
+        if(i<10){
+            cout << i << "   ";
+        }
+        else{
+            cout<< i <<"  ";
+        }
+
     }
     cout << endl << "y";
     for(int row = 0 ; row < h ; row++){
-        cout << "\n" << row << "   ";
+        if(row<10){
+            cout << "\n" << row << "   ";
+        }
+        else{
+            cout << "\n" << row << "  ";
+        }
         for(int column = 0 ; column < w ; column++){
             cout<<gameBoard[row][column]<<"   ";
         }

@@ -24,7 +24,7 @@ void addPlayers(Player &player1 , Player &player2){
 void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
     int number1 , number2 ; 
     srand(time(NULL));//randomise
-    int guessnumber = rand()%100 ; 
+    int guessnumber = rand()%100 ;
     cout<<"Number guess time!!! \nWho ever guesses a number closer to the random number ranging from 0 to 99 will goes first" << endl;
     cout<<player1.name<<" please enter a number between 0 to 99: ";
     cin>>number1;
@@ -89,14 +89,14 @@ void place_go(char **gameBoard, int width , int height, Player& current_player )
         cout<<"Enter x coordinate: ";
         cin>> x;
         while(cin.fail() or x < 0 or x >= width ){
-            cout<<"please enter a valid int";
+            cout<<"please enter a valid int： ";
             cin.clear();
             cin>>x; 
         }
         cout<<"Enter y coordinate: ";
         cin>> y ;
         while(cin.fail() or y < 0 or y >= height ){
-            cout<<"Please enter a valid int";
+            cout<<"Please enter a valid int： ";
             cin.clear();
             cin>>y; 
         }
