@@ -13,16 +13,18 @@ using namespace std;
 //change the element in two struct 
 void addPlayers(Player &player1 , Player &player2);
 
-//Function: Randomly generates a number between 0 and 99 and promote players to enter a number
-//Output: Return the player with the closer guess
-void num_guess(Player &player1 , Player &player2);
+//Function: Randomly generates a number between 0 and 99 and promote players to enter a number,
+//          Who guess the closer will play O and become the current player
+//Input: player 1 by reference, player 2 by reference, current player by reference
+void num_guess(Player &player1 , Player &player2, Player &currentPlayer);
 
-//Function: Place go on the board at location row x and column y
-//Input: x,y: the coordinates to place go.   go: the type of go (X or O)
-void place_go(char **gameboard, char go, int width , int height, Player current_player);
+//Function: Place go on the board at location row x and column y by user input.
+//Input: width, height: width and height of the game board.  gameBoard: the current game board
+//       current_player: the current player
+void place_go(char **gameBoard, int width , int height, Player& current_player);
 
 //Function: Switch the current player
-//Input: current_player: the current player.  go: the type of go (X or O) for the current player
-void switch_player(char &currentGo, Player current_player);
+//Input: current_player: the current player by reference.  player1: player 1.   player2L player 2.
+void switch_player(const Player& player1, const Player& player2, Player& current_player);
 
 #endif
