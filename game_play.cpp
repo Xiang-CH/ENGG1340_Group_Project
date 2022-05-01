@@ -28,16 +28,51 @@ void num_guess(Player &player1 , Player &player2){
     cout<<"guess time!!! who enter the number close to the random number ranged from 0 to 99 will go first";
     cout<<player1.name<<"please enter a number between 0 to 99";
     cin>>number1;
+    //input check
     while(cin.fail()){
         cout<<"please enter a integer"<<endl;
-        cin.clear();
+        cin.clear();//clear input buffer 
         cin>>number1;
     }
+    cout<<player2.name<<"please enter a number between 0 to 99";
+    cin>>number2;
+    while(cin.fail()){
+        cout<<"please enter a integer"<<endl;
+        cin.clear();//clear input buffer 
+        cin>>number2;
+    }
     //calculate difference part........
+    number1 = abs(number1 - guessnumber);
+    number2 =abs(number2-guessnumber); 
+    if(number1<number2){
+        cout<<player1.name<<"go first with O"<<endl;
+        player1.go='O';
+        player2.go='X';
+
+    }
+    else if(number1 > number2){
+        cout<<player2.name<<"go first with O"<<endl;
+        player2.go='O';
+        player1.go='X';
+
+    }
+    else if(number1 == number2){
+        int start= 0; 
+        cout<<"same guess,random start"<<endl;
+        start = rand()%2 ; 
+        if(start == 0 ){
+            cout<<player1.name<<"start first with O"<<endl;
+            player1.go='O';
+            player2.go='X';
+        }
+        else{
+            cout<<player2.name<<"start first with O"<<endl;
+            player2.go='O';
+            player1.go='X';
+        }
+    }
 
     
-
-
 }
 
 //Funtion: Place go on the board at location row x and column y
