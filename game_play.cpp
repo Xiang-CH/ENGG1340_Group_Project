@@ -197,3 +197,15 @@ void switch_player(const Player& player1, const Player& player2, Player& current
         current_player = player1;
     }
 }
+
+int count_go(char **gameBoard , int width , int height){
+    int counter = 0 ;
+    for(int row =0 ; row < height ; row ++ ){
+        for( int column  = 0 ; column < width ; column++ ){
+            if(gameBoard[row][column]!= '_'){
+                counter++;
+            }
+        }
+    }
+    return counter ;
+}
