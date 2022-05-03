@@ -35,6 +35,6 @@ void switch_player(const Player& player1, const Player& player2, Player& current
 //Function: random switch two go in the game board
 //Input: the dynamic array stored all the go, the height of the array , the width of the array
 //Output: True: After Switch, there is a winner or tie, gameover ; False: No winner, game continue.
-bool switch_go(char **gameBoard , int width , int height , const Player player1 , const Player player2 );
+bool switch_go(char **gameBoard , int width , int height , const Player &player1 , const Player &player2 );
 
 #endif
