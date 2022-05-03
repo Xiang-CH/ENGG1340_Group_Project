@@ -3,10 +3,14 @@
 #define gamePlay_h
 
 #include "player.h"
+#include "judge.h"
+#include "board.h"
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
+
 using namespace std;
 
 //pass the address of two player in this function
@@ -27,5 +31,10 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player);
 //Function: Switch the current player
 //Input: current_player: the current player by reference.  player1: player 1.   player2L player 2.
 void switch_player(const Player& player1, const Player& player2, Player& current_player);
+
+//Function: random switch two go in the game board
+//Input: the dynamic array stored all the go, the height of the array , the width of the array
+//Output: True: After Switch, there is a winner or tie, gameover ; False: No winner, game continue.
+bool switch_go(char **gameBoard , int width , int height , const Player player1 , const Player player2 );
 
 #endif
