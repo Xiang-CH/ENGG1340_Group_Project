@@ -36,13 +36,26 @@ int main(){
         num_guess(player1, player2, currentPlayer);
     }
     else{
-        get_board_dimension(width, height);
+        if (get_board_dimension(width, height)){
+            //no previously saved file
+            user_defined_board_size(width, height);
+            // Declare gameBoard as a 2D dynamic array
+            gameBoard = new char*[height];
+            for (int i = 0; i < height; i++)
+                gameBoard[i] = new char[width];
+            //pre-game
+            init_board(width, height, gameBoard);
+            addPlayers(player1, player2);
+            num_guess(player1, player2, currentPlayer);
+        }
+        else {
+            //There is previously saved file
+            gameBoard = new char *[height];
+            for (int i = 0; i < height; i++)
+                gameBoard[i] = new char[width];
 
-        gameBoard = new char*[height];
-        for (int i = 0; i < height; i++)
-            gameBoard[i] = new char[width];
-
-        load_game(currentPlayer, player1, player2, gameBoard, width, height);
+            load_game(currentPlayer, player1, player2, gameBoard);
+        }
     }
 
 
