@@ -16,6 +16,10 @@ int main(){
     Player player2 = {"", 2, -1, -1, '!'};
     Player currentPlayer;
     char **gameBoard;
+    
+    // use to store the number of go in the gameBoard
+    int count = 0 ;
+
 
     cout << "Heart Beat Go Bang" << endl;
     cout << "---------Menu------------" << endl;
@@ -58,7 +62,7 @@ int main(){
         }
     }
 
-
+    count = count_go (gameBoard ,width , height );
 
     //Game starts
     cout << "\n---------------------------------------------" << endl;
@@ -70,12 +74,18 @@ int main(){
             break;
         }
         print_board( width, height, gameBoard);
+        count++;
         // check if five in a row
         if (judge(currentPlayer.x, currentPlayer.y, gameBoard, width, height)){
             cout << currentPlayer.name << " Won!" << endl;
             break;
         }
-
+        if(count%10==0){
+            //switch two go
+            if(switch_go(gameBoard,width,height,player1,player2)){
+                break;
+            }
+        }
         switch_player(player1, player2, currentPlayer);
     }
 
