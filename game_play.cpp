@@ -119,7 +119,7 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player )
     return false;
 }
 
-bool switch_go(char **gameboard , int width , int height , Player player1 , Player player2  ){
+bool switch_go(char **gameboard , int width , int height , const Player &player1 , const Player &player2  ){
 
     struct point{
         int xcoordinate ;
