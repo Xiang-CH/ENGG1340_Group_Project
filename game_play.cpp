@@ -119,6 +119,75 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player )
     return false;
 }
 
+bool switch_go(char **gameboard , int width , int height , Player player1 , Player player2  ){
+
+    struct point{
+        int xcoordinate ;
+        int ycoordinate ;
+    };
+    vector<point>cross;
+    vector<point>circle;
+    point currentposition;
+    point position;
+
+    cout<<"Heartbeat time!\none of each player's go will switch automatically"
+
+    //loop through all the element and add them to vector
+    for(int row = 0 ; row < height ; row++ ){
+        for(int column = 0 ; column < width ; column++ ){
+            if(gameboard[row][column]=='X'){
+                currentposition.xcoordinate=column;
+                currentposition.ycoordinate=row;
+                cross.push_back(currentposition);
+            }
+            else if(gameboard[row][column] == 'O'){
+                currentposition.xcoordinate=column;
+                currentposition.ycoordinate=row;
+                circle.push_back(currentposition);
+            }
+        }
+    }
+
+    int index = 0 ;
+    //store the position in two variable, current position and position for switch use
+    index = rand()%cross.size();
+    currentposition = cross[index];
+    index = rand()%circle.size();
+    position = circle[index];
+
+    //directly change the go  opposite
+    gameboard[currentposition.ycoordinate][currentposition.xcoordinate] = 'O';
+    gameboard[position.ycoordinate][position.xcoordinate]='X';
+    print_board(width,height,gameboard);
+
+    //check-win due to the switch
+    if( judge(currentposition.xcoordinate,currentposition.ycoordinate,gameboard,width,height) &&
+            judge(position.xcoordinate,currentposition.ycoordinate,gameboard,width,height)){
+        cout<<"tie"<<endl;
+        return true;
+    }
+    else if(judge(currentposition.xcoordinate,currentposition.ycoordinate,gameboard,width,height)){
+        if(player1.go=='O'){
+            cout<<player1.name<<"Won!"<<endl;
+        }
+        else{
+            cout<<player2.name<<"Won!"<<endl;
+        }
+        return true;
+    }
+    else if(judge(position.xcoordinate,currentposition.ycoordinate,gameboard,width,height)){
+        if(player1.go=='O'){
+            cout<<player1.name<<"Won!"<<endl;
+        }
+        else{
+            cout<<player2.name<<"Won!"<<endl;
+        }
+        return true;
+    }
+
+    return false;
+
+}
 
 void switch_player(const Player& player1, const Player& player2, Player& current_player){
     if (player1.id == current_player.id){
