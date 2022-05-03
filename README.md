@@ -70,9 +70,11 @@ Which will also make this chess game more 'balance' to some extent.
     - Input are the x and y coordinated of where the go is placed
     - Outputs whether their is five in a row
   
-- void switch() - Code Requirement 5
+- bool switch_go(char **gameBoard , int width , int height , const Player player1 , const Player player2 ) - Code Requirement 5
 
   - Switches two go that are of different kinds
+  - input: gameboard, size of the gameboard, the players information 
+  - output boolean value true: after switch the game over, win or tie; False: after switch the game continue.
 
 - void save_game() - Code Requirement 4 & 5
 
