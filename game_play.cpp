@@ -82,16 +82,21 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
 }
 
 
-void place_go(char **gameBoard, int width , int height, Player& current_player ){
-    int x , y ; 
-    cout<< current_player.name << "'s round, please place go" << endl;
+bool place_go(char **gameBoard, int width , int height, Player& current_player ){
+    int x , y ;
+    cout << endl;
+    cout << current_player.name << "'s round, please place go" << endl;
+    cout << "Enter -1 to save game" << endl;
     while(true){
         cout<<"Enter x coordinate: ";
         cin>> x;
-        while(cin.fail() or x < 0 or x >= width ){
+        while(cin.fail() or x < -1 or x >= width ){
             cout<<"please enter a valid int： ";
             cin.clear();
             cin>>x; 
+        }
+        if (x == -1){
+            return true;
         }
         cout<<"Enter y coordinate: ";
         cin>> y ;
@@ -111,6 +116,7 @@ void place_go(char **gameBoard, int width , int height, Player& current_player )
             break;
         }
     }
+    return false;
 }
 
 

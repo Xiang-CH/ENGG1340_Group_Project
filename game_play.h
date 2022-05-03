@@ -21,7 +21,8 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer);
 //Function: Place go on the board at location row x and column y by user input.
 //Input: width, height: width and height of the game board.  gameBoard: the current game board
 //       current_player: the current player
-void place_go(char **gameBoard, int width , int height, Player& current_player);
+//Output: True player wants to save game,  False: Player wants to continue the game
+bool place_go(char **gameBoard, int width , int height, Player& current_player);
 
 //Function: Switch the current player
 //Input: current_player: the current player by reference.  player1: player 1.   player2L player 2.
