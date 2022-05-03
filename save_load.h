@@ -2,6 +2,8 @@
 #ifndef saveLoad_h
 #define saveLoad_h
 #include "player.h"
+#include "game_play.h"
+#include "board.h"
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -26,8 +28,12 @@ void save_game(const Player& current_player, const Player& p1, const Player& p2,
 
 //Function: To load previous progress of the game into the current game.
 //Inputs: current_player: the current player.  p1: player 1.  p2: player2.  gameBoard: the current status of game board
-void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard);
+//         width: width of board.    height: height of board
+void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard, int & width, int  & height);
 
+
+//Functions: To get the width and height of the previous game
+//Inputs: w: width by reference. h:height by reference
 void get_board_dimension(int &w, int &h);
 
 #endif

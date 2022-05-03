@@ -42,7 +42,7 @@ int main(){
         for (int i = 0; i < height; i++)
             gameBoard[i] = new char[width];
 
-        load_game(currentPlayer, player1, player2, gameBoard);
+        load_game(currentPlayer, player1, player2, gameBoard, width, height);
     }
 
 
