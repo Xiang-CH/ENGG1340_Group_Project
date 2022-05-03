@@ -37,4 +37,10 @@ void switch_player(const Player& player1, const Player& player2, Player& current
 //Output: True: After Switch, there is a winner or tie, gameover ; False: No winner, game continue.
 bool switch_go(char **gameBoard , int width , int height , const Player &player1 , const Player &player2 );
 
+
+//Function: count the number of the go in the gameBoard
+//input: the gameBoard array and the width and the height of the gameBoard
+//Output: the number of the go in the gameBoard
+int count_go(char **gameBoard , int width , int height);
+
 #endif
