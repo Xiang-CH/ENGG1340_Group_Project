@@ -25,7 +25,7 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
     int number1 , number2 ; 
     srand(time(NULL));//randomise
     int guessnumber = rand()%100 ;
-    cout<<"Number guess time!!! \nWho ever guesses a number closer to the random number ranging from 0 to 99 will go first" << endl;
+    cout<<"Number guess time!!! \nWho ever guesses a number closer to the random number ranging from 0 to 99 will goes first" << endl;
     cout<<player1.name<<" please enter a number between 0 to 99: ";
     cin>>number1;
     //input check
@@ -130,7 +130,7 @@ bool switch_go(char **gameboard , int width , int height , const Player &player1
     point currentposition;
     point position;
 
-    cout<<"Heartbeat time!\none of each player's go will switch automatically";
+    cout<<"Heartbeat time!\none of each player's go will switch automatically"
 
     //loop through all the element and add them to vector
     for(int row = 0 ; row < height ; row++ ){
