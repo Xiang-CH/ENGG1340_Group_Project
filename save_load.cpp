@@ -26,16 +26,22 @@ void save_game(const Player& current_player, const Player& p1, const Player& p2,
 }
 
 
-void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard){
+void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard, int & width, int  & height){
     string player1_data;
     string player2_data;
     string temp_board_content;
-    int width, height;
 
     ifstream fin (File_Name);
-    if (fin.fail()){
-        cout << "failed to load progress" << endl;
-        exit(1);
+    if (fin.fail()){  // If failed then no previously saved game status so start new game
+        cout << "Failed to load progress. Staring a new game instead!" << endl;
+        // Declare gameBoard as a 2D dynamic array
+        gameBoard = new char*[height];
+        for (int i = 0; i < height; i++)
+            gameBoard[i] = new char[width];
+        //pre-game
+        init_board(width, height, gameBoard);
+        addPlayers(p1, p2);
+        num_guess(p1, p2, current_player);
     }
 
     fin >> width >> height;
@@ -50,12 +56,7 @@ void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard
     for (int i = 0; i < height; i++){
         for (int j = 0; j < width; j++) {
             fin >> temp_board_content;
-            if (temp_board_content == "O")
-                gameBoard[i][j] = 'O';
-            else if (temp_board_content == "X")
-                gameBoard[i][j] = 'X';
-            else
-                gameBoard[i][j] = '_';
+            gameBoard[i][j] = temp_board_content[0];
         }
     }
 
