@@ -38,7 +38,7 @@ void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard
         exit(1);
     }
 
-    fin >> width >> height;
+    fin >> width >> height ;
 
 
     getline(fin, current_player.name); // read empty line
@@ -79,4 +79,30 @@ bool get_board_dimension(int &w, int &h){
     fin >> w >> h;
     fin.close();
     return false;
+}
+
+
+void delete_game_data(){
+    ofstream fout (File_Name);
+    if (!(fout.fail())){  // if a previous game status file exists
+        char delete_game; // for storing user input
+        cout << "This round of game is over\nDo you want to delete the previously saved checkpoint? (Y/N): ";
+
+        // input validation
+        while (!(cin >> delete_game) and (tolower(delete_game) != 'y' or tolower(delete_game) != 'n' )){
+            cout<<"Please enter a valid character (Y/N): ";
+            cin.clear();//clear input buffer
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            //cin>>delete_game;
+        }
+        // delete previous file if needed
+        if (tolower(delete_game)=='y'){
+           if (remove(File_Name) == 0){
+               cout << "Previous checkpoint deleted";
+           }
+           else{
+               cout << "Failed to delete previous checkpoint";
+           }
+        }
+    }
 }

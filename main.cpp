@@ -76,6 +76,7 @@ int main(){
         // check if five in a row
         if (judge(currentPlayer.x, currentPlayer.y, gameBoard, width, height)){
             cout << currentPlayer.name << " Won!" << endl;
+            delete_game_data();
             break;
         }
         if(count%10==0){
@@ -90,10 +91,16 @@ int main(){
         }
         else{
             cout<<"tie"<<endl;
+            delete_game_data();
             break;
         }
     }
 
 
     cout << endl << "Game end" << endl;
+    // delete memory for game board
+    for (int i = 0; i < height; i++){
+        delete []gameBoard[i];
+    }
+    delete []gameBoard;
 }
