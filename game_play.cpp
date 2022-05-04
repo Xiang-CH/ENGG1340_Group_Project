@@ -93,6 +93,7 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player )
         while(cin.fail() or x < -1 or x >= width ){
             cout<<"please enter a valid int： ";
             cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin>>x; 
         }
         if (x == -1){
@@ -103,6 +104,7 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player )
         while(cin.fail() or y < 0 or y >= height ){
             cout<<"Please enter a valid int： ";
             cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin>>y; 
         }
         if(gameBoard[y][x]!='_'){
