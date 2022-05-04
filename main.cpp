@@ -1,6 +1,3 @@
-//
-// Created by 陈想 on 1/5/2022.
-//
 #include "game_play.h"
 #include "board.h"
 #include "judge.h"
@@ -80,15 +77,26 @@ int main(){
             cout << currentPlayer.name << " Won!" << endl;
             break;
         }
+        // heart beat time every 10 rounds
         if(count%10==0){
-            //switch two go
+            // switch two go
             if(switch_go(gameBoard,width,height,player1,player2)){
                 break;
             }
+            // if number of go placement equals and no win after switch then tie game
+            else if(count == width * height){
+                cout << "Tie Game" << endl;
+                break;
+            }
         }
+        // check for full board
+        if(count == width * height){
+            cout << "Tie Game" << endl;
+            break;
+        }
+        //switch current players
         switch_player(player1, player2, currentPlayer);
     }
-
 
     cout << endl << "Game end" << endl;
 }

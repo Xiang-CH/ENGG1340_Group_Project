@@ -35,7 +35,7 @@ bool judge_vertical(int x, int y, char ** gameBoard, int boardHeight){
         idx--;
     }
     //To the bottom of the placed go
-    idx = x + 1;
+    idx = y + 1;
     while (idx < boardHeight and gameBoard[idx][x] == goType){
         counter ++;
         if (counter >= 5) return true;
@@ -56,7 +56,7 @@ bool judge_leftTop_to_rightDown_diagonal(int x, int y, char ** gameBoard, int bo
     }
     //To the right down of the placed go
     idx = 1;
-    while (x+idx < boardWidth && y+idx < boardHeight && gameBoard[y+idx][x-idx] == goType){
+    while (x+idx < boardWidth && y+idx < boardHeight && gameBoard[y+idx][x+idx] == goType){
         counter ++;
         if (counter >= 5) return true;
         idx++;
