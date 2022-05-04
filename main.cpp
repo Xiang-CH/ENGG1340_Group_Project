@@ -86,6 +86,10 @@ int main(){
             if(switch_go(gameBoard,width,height,player1,player2)){
                 break;
             }
+            else if (count == total){
+                cout<<"tie"<<endl;
+                break;
+            }
         }
         if(count!= total){
             switch_player(player1, player2, currentPlayer);
