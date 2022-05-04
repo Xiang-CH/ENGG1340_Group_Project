@@ -85,7 +85,7 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
 bool place_go(char **gameBoard, int width , int height, Player& current_player ){
     int x , y ;
     cout << endl;
-    cout << current_player.name << "'s round, please place go" << endl;
+    cout << current_player.name << "'s round, please place go (" << current_player.go <<")"<< endl;
     cout << "Enter -1 to save game" << endl;
     while(true){
         cout<<"Enter x coordinate: ";
@@ -177,8 +177,8 @@ bool switch_go(char **gameboard , int width , int height , const Player &player1
         }
         return true;
     }
-    else if(judge(position.xcoordinate,currentposition.ycoordinate,gameboard,width,height)){
-        if(player1.go=='O'){
+    else if(judge(position.xcoordinate,position.ycoordinate,gameboard,width,height)){
+        if(player1.go=='X'){
             cout<<player1.name<<"Won!"<<endl;
         }
         else{
