@@ -63,6 +63,7 @@ int main(){
     }
 
     count = count_go (gameBoard ,width , height );
+    int total = width * height ;
 
     //Game starts
     cout << "\n---------------------------------------------" << endl;
@@ -86,7 +87,13 @@ int main(){
                 break;
             }
         }
-        switch_player(player1, player2, currentPlayer);
+        if(count!= total){
+            switch_player(player1, player2, currentPlayer);
+        }
+        else{
+            cout<<"tie"<<endl;
+            break;
+        }
     }
 
 
