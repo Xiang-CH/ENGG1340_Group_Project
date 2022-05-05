@@ -85,7 +85,9 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
     
 }
 
-
+//function: enter the x, y coordinate and the place go , if -1 is put, save the game
+//input: gameboard, width and height of the gameBoard,  current_player
+//return boolean value (true: save the game , false: continue the game)
 bool place_go(char **gameBoard, int width , int height, Player& current_player ){
     int x , y ;
     cout << endl;
