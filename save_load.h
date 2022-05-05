@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 
-const char File_Name[19] = "last_game_data.txt";
+const char File_Name[19] = "last_game_data.txt";  //global constant for the name of the status file
 
 // Text file format
 /*  width height count
