@@ -84,9 +84,11 @@ bool get_board_dimension(int &w, int &h){
 
 
 void delete_game_data(){
-    ofstream fout (File_Name);
+    ofstream fout;
+    fout.open(File_Name, ios_base::app);  // open by append so it doesn't overwrite previous data
     if (!(fout.fail())){  // if a previous game status file exists
         char delete_game; // for storing user input
+        fout.close();
         cout << "This round of game is over\nDo you want to delete the previously saved checkpoint? (Y/N): ";
 
         // input validation
