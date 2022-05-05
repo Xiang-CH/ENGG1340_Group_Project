@@ -8,7 +8,7 @@ Team members:
 
 <br />
 
-**Project Proposal:**
+##Project Proposal
 
 Our project creates an abbreviated version of goBang game (five in a row), for two players, with a dynamic board.
 
@@ -18,7 +18,7 @@ Tested on Academy 21
 
 <br />
 
-**Rule of the game:**
+##Rule of the game:
 
 Each player will have a kind of go: cross or circle.
 They will play alternately.
@@ -36,7 +36,7 @@ Which will also make this chess game more 'balance' to some extent.
 
 <br />
 
-**Features**
+##Features
 
 - Initialize player data
   - prompt for user name
