@@ -1,6 +1,3 @@
-//
-// Created by 陈想 on 1/5/2022.
-//
 #include "judge.h"
 
 bool judge(int x, int y, char ** gameBoard, int w, int h){
