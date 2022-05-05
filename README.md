@@ -6,6 +6,7 @@ Team members:
 2. Ruiyi Lin  3035948419
 
 
+<br />
 
 **Project Proposal:**
 
@@ -15,6 +16,7 @@ Demo Video: https://connecthkuhk-my.sharepoint.com/:v:/g/personal/cxiang_connect
 
 Tested on Academy 21
 
+<br />
 
 **Rule of the game:**
 
@@ -32,7 +34,7 @@ Which will also make this chess game more 'balance' to some extent.
 
   - After 4 rounds, before the next player start placing, the computer will randomly swap 2 gos (of difference team).
 
-
+<br />
 
 **Features**
 
