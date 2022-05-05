@@ -15,3 +15,14 @@ save_load.o : save_load.cpp save_load.h
 main : board.o game_play.o judge.o judge_helper.o main.o save_load.o
 	g++ $(FLAGS) $^ -o $@
 
+#clean all the .o file and the executable file
+clean :
+	rm -f *.o main
+
+#tar all the file in our project into a .tar
+tar :
+	tar -czvf heartbeat_gobang.tar *.cpp *.h
+
+#run anyway if there is already a  file  named clean or tar
+.PHONY: clear tar
+
