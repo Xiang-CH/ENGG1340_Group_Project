@@ -6,7 +6,12 @@
 #include <cstdlib>//rand number generate 
 #include <ctime>//call current use for srand()
 
-using namespace std ; 
+using namespace std ;
+
+// Global seed
+const int seed1 = 0;  // for the given sample input and output file
+// Uncomment the following line and comment the above line for more random game,
+// const int seed1 = time(NULL);
 
 // Function: Prompt user for their desired width and height of board
 // Input: w(by reference): width of board.  h(by reference): height of board

@@ -15,6 +15,11 @@
 
 using namespace std;
 
+// Global seed
+const int seed2 = 0;  // for the given sample input and output file
+// Uncomment the following line and comment the above line for more random game,
+// const int seed2 = time(NULL);
+
 //pass the address of two player in this function
 //change the element in two struct 
 void addPlayers(Player &player1 , Player &player2);

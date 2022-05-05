@@ -2,9 +2,6 @@
 #include "game_play.h"
 
 
-//Function: add the name of two players
-//Input: two structs players, player1 and player2(pass by reference).
-// change the element in two struct
 
 void addPlayers(Player &player1 , Player &player2){
     string name ; 
@@ -19,12 +16,11 @@ void addPlayers(Player &player1 , Player &player2){
     player2.name = name ;
 }
 
-//Function: Randomly generates a number between 0 and 99 and promote players to enter a number
-//Output: Return the player with the closer guess
+
 void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
 
     int number1 , number2 ; 
-    srand(time(NULL));//randomise
+    srand(seed2);//randomise
     int guessnumber = rand()%100 ;//generate the number need to be guessed by players
     cout<<"Number guess time!!! \nWho ever guesses a number closer to the random number ranging from 0 to 99 will go first" << endl;
     cout<<player1.name<<" please enter a number between 0 to 99: ";
@@ -84,9 +80,7 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
     
 }
 
-//function: enter the x, y coordinate and the place go , if -1 is put, save the game
-//input: gameboard, width and height of the gameBoard,  current_player
-//return boolean value (true: save the game , false: continue the game)
+
 bool place_go(char **gameBoard, int width , int height, Player& current_player ){
     int x , y ;
     cout << endl;
@@ -126,9 +120,7 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player )
     return false;
 }
 
-//function: switch two gos by computer when 10 gos are put
-//input: gameboard, width , height, player1, player2
-//return boolean value which determine the end of the game( true: gameend , false: continue)
+
 bool switch_go(char **gameboard , int width , int height , const Player &player1 , const Player &player2  ){
     //use for store the x, y coordinate of a go
     struct point{
@@ -163,6 +155,7 @@ bool switch_go(char **gameboard , int width , int height , const Player &player1
     }
 
     int index = 0 ;
+    srand(seed2);//randomise
     //store the position in two variable, current position and position for switch use
     index = rand()%cross.size();
     currentposition = cross[index];
@@ -203,9 +196,7 @@ bool switch_go(char **gameboard , int width , int height , const Player &player1
 
 }
 
-//function: switch the current player to next plyer
-//input: player1, player2, current_player(pass by reference)
-//no return value
+
 void switch_player(const Player& player1, const Player& player2, Player& current_player){
     if (player1.id == current_player.id){
         current_player = player2;
@@ -215,9 +206,7 @@ void switch_player(const Player& player1, const Player& player2, Player& current
     }
 }
 
-//function: count the number of go in the gameBoard
-//input:  **gameBoard, width , height (gameBoard and its size)
-//return: the number of the go
+
 int count_go(char **gameBoard , int width , int height){
 
     int counter = 0 ;

@@ -1,10 +1,6 @@
 #include "board.h"
 
 
-
-// Function: Prompt user for their desired width and height of board
-// Input: w(by reference): width of board.  h(by reference): height of board
-//no return value, pass by reference of w and h 
 void user_defined_board_size(int &w, int &h){
     cout << "Please enter the desired board width (5 - 20): ";
 
@@ -26,18 +22,9 @@ void user_defined_board_size(int &w, int &h){
     }
 }
 
-// Function: Initializing the game board with x row and y column
-//           Then randomly places 2 crosses and 1 circle on the board
-// Input: x: width of board.  y: height of board.   gameBoard: 2D array of board
-void init_board(int x, int y, char **gameBoard){
 
-    /*
-    //use array of pointers to realize a function of 2d dynamic arrays 
-    gameBoard = new char*[y]; // 1 dimensional  allocate  memory space
-    for(int height = 0 ; height < y; height++ ){
-        gameBoard[height] = new char[x];
-    }
-    */
+
+void init_board(int x, int y, char **gameBoard){
 
     //two for loops initialise the empty board with char _
     for(int row = 0 ; row  < y ; row ++ ){
@@ -47,7 +34,7 @@ void init_board(int x, int y, char **gameBoard){
     }
 
     //randomly place three go with computer
-    srand(time(NULL)); //randomise
+    srand(seed1); //randomise
     char init[3]={'X','O','X'};
     for(char i : init){
         int row = rand()%y;
@@ -57,10 +44,8 @@ void init_board(int x, int y, char **gameBoard){
 
 }
 
-// Function: Print the game board
-// Input: x: width of board.  y: height of board.   gameBoard: 2D array of board
-//no return value
-//Output: the gameBoard with row number and the column number
+
+
 void print_board(int w, int h, char **gameBoard){
 
     //print the column number in first line
