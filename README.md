@@ -7,6 +7,7 @@ Team members:
 
 
 <br />
+
 **Project Proposal:**
 
 Our project creates an abbreviated version of goBang game (five in a row), for two players, with a dynamic board.
@@ -16,6 +17,7 @@ Demo Video: https://connecthkuhk-my.sharepoint.com/:v:/g/personal/cxiang_connect
 Tested on Academy 21
 
 <br />
+
 **Rule of the game:**
 
 Each player will have a kind of go: cross or circle.
