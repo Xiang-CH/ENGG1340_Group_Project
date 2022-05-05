@@ -79,6 +79,7 @@ int main(){
             delete_game_data();
             break;
         }
+        //every 10 gos are put, switch two gos by computer
         if(count%10==0){
             //switch two go
             if(switch_go(gameBoard,width,height,player1,player2)){

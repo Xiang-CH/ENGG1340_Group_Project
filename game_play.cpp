@@ -125,20 +125,27 @@ bool place_go(char **gameBoard, int width , int height, Player& current_player )
     return false;
 }
 
+//function: switch two gos by computer when 10 gos are put
+//input: gameboard, width , height, player1, player2
+//return boolean value which determine the end of the game( true: gameend , false: continue)
 bool switch_go(char **gameboard , int width , int height , const Player &player1 , const Player &player2  ){
-
+    //use for store the x, y coordinate of a go
     struct point{
         int xcoordinate ;
         int ycoordinate ;
     };
+
+    //use for store the point of go which is X and O
     vector<point>cross;
     vector<point>circle;
+
     point currentposition;
     point position;
 
     cout<<"Heartbeat time!\none of each player's go will switch automatically"<<endl;
 
-    //loop through all the element and add them to vector
+    //loop through all the element and find the point is X and O
+    //add them to vector respectively
     for(int row = 0 ; row < height ; row++ ){
         for(int column = 0 ; column < width ; column++ ){
             if(gameboard[row][column]=='X'){
@@ -195,6 +202,9 @@ bool switch_go(char **gameboard , int width , int height , const Player &player1
 
 }
 
+//function: switch the current player to next plyer
+//input: player1, player2, current_player(pass by reference)
+//no return value
 void switch_player(const Player& player1, const Player& player2, Player& current_player){
     if (player1.id == current_player.id){
         current_player = player2;
@@ -204,7 +214,11 @@ void switch_player(const Player& player1, const Player& player2, Player& current
     }
 }
 
+//function: count the number of go in the gameBoard
+//input:  **gameBoard, width , height (gameBoard and its size)
+//return: the number of the go
 int count_go(char **gameBoard , int width , int height){
+
     int counter = 0 ;
     for(int row =0 ; row < height ; row ++ ){
         for( int column  = 0 ; column < width ; column++ ){
