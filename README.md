@@ -5,7 +5,7 @@ Team members:
 1. Xiang Chen 3035951868
 2. Ruiyi Lin  3035948419
 
-**important**: The random seed in the program is cuurently set to a fixed seed for accuracy of the sample input/output file. If you desire a more random game please follow the instructions under global seed part in "board.h" and "game_play.h" (uncomment a line of code).  
+**important**: The random seed in the program is currently set to a fixed seed for accuracy of the sample input/output file. If you desire a more random game please follow the instructions under global seed part in "board.h" and "game_play.h" (uncomment a line of code).  
 
 <br />
 
