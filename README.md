@@ -9,7 +9,7 @@ Team members:
 
 **Project Proposal:**
 
-Our current idea is to make a abbrivated version of gobang game (five in a row), for two players, with a board of ten rows or more.
+Our current idea is to make an abbreviated version of gobang game (five in a row), for two players, with a board of ten rows or more.
 
 **Rule of the game:**
 Each player will have a kind of go: cross or circle. 
