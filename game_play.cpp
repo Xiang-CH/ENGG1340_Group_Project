@@ -3,9 +3,10 @@
 
 #include <utility>
 
+//Function: add the name of two players
+//Input: two structs players, player1 and player2(pass by reference).
+// change the element in two struct
 
-//pass two player in this function
-//change the element in two struct 
 void addPlayers(Player &player1 , Player &player2){
     string name ; 
 
@@ -22,9 +23,10 @@ void addPlayers(Player &player1 , Player &player2){
 //Function: Randomly generates a number between 0 and 99 and promote players to enter a number
 //Output: Return the player with the closer guess
 void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
+
     int number1 , number2 ; 
     srand(time(NULL));//randomise
-    int guessnumber = rand()%100 ;
+    int guessnumber = rand()%100 ;//generate the number need to be guessed by players
     cout<<"Number guess time!!! \nWho ever guesses a number closer to the random number ranging from 0 to 99 will go first" << endl;
     cout<<player1.name<<" please enter a number between 0 to 99: ";
     cin>>number1;
@@ -32,20 +34,22 @@ void num_guess(Player &player1 , Player &player2, Player &currentPlayer){
     while(cin.fail() or number1 < 0 or number1 > 99){
         cout<<"Please enter a valid number (0-99): ";
         cin.clear();//clear input buffer
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignore the char of enter a newline
         cin>>number1;
     }
     cout<<player2.name<<" please enter a number between 0 to 99: ";
     cin>>number2;
+    //input check
     while(cin.fail() or number2 < 0 or number2 > 99){
         cout<<" please enter a valid number (0-99): ";
         cin.clear();//clear input buffer
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');//ignore the char of enter a newline
         cin>>number2;
     }
     //calculate difference part........
     number1 = abs(number1 - guessnumber);
     number2 = abs(number2-guessnumber);
+    //determine the first start player according to the guess
     if(number1<number2){
         cout<<player1.name<<" plays first with the go: O"<<endl;
         player1.go='O';
