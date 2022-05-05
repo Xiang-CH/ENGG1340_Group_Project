@@ -9,18 +9,25 @@ Team members:
 
 **Project Proposal:**
 
-Our current idea is to make an abbreviated version of gobang game (five in a row), for two players, with a board of ten rows or more.
+Our project creates an abbreviated version of goBang game (five in a row), for two players, with a dynamic board.
+
+Demo Video: https://connecthkuhk-my.sharepoint.com/:v:/g/personal/cxiang_connect_hku_hk/EXIIh-GB1aNMvIvUcBjaIDoB_hQ8frl4nYsu-wd08foXuA?e=tJgWdt
+
+Tested on Academy 21
+
 
 **Rule of the game:**
-Each player will have a kind of go: cross or circle. 
-The player who come out to have a series of five same go first wins. It can be horizontal, verticle, or diagonal. 
 
-The game will start by the program initalizing three gos on the board, 2 crosses and 1 circle. 
-Then each player will need to enter a number, the computer will also generate a number, the player who guesses more closely will get to choose which go (cross or circle) they intent to play.
+Each player will have a kind of go: cross or circle.
+They will play alternately.
+The player who come out to have a series of five same go first wins. It can be horizontal, vertical, or diagonal.
+
+The game will start by the program initializing 1-3 gos on the board.
+Then each player will need to enter a number, the computer will also generate a number, the player who guesses more closely will get to choose which go (cross or circle) they intend to play.
 
 The player playing circle will start first then followed by player playing cross.
 
-In the game, the computer will intervene the game at some point or at a regular pattern to increase the uncertainity，excitement and entertainment.
+In the game, the computer will intervene the game at every 10 go placed to increase the uncertainty，excitement and entertainment.
 Which will also make this chess game more 'balance' to some extent.
 
   - After 4 rounds, before the next player start placing, the computer will randomly swap 2 gos (of difference team).
@@ -29,60 +36,49 @@ Which will also make this chess game more 'balance' to some extent.
 
 **Features**
 
-- void init_board() - Code Requirement 1 & 2 & 3
+- Initialize player data
+  - prompt for user name
+  - name, go type, last played coordinate are stored in a player data structure - Code Requirement 2
 
- 	- For intializing the board will x row and column demanding on a user input as a dynamic array, 
-  - Randomly place the three go 
-  
-  
-- int num_guess() - Code Requirement 1
 
-  - Randomly generates a number between 0 and 99
+- User determined board size
+  - prompt user to enter desired board size
+  - create a dynamic array for storing the board - Code Requirement 2 & 3
+
+
+- Initialize board - Code Requirement 5
+
+  - For initializing an empty board
+  - Randomly place the 1-3 go  - Code Requirement 1
+
+
+- Number guess game - Code Requirement 5
+
+  - Randomly generates a number between 0 and 99 - Code Requirement 1
   - Promote players to enter a number
   - return the player with the closer guess
- 
-- void place_go(int x, int y) 
 
-  - For placing the go on the board
-  - Input are the x and y coordinated of where to place 
-  
-- bool judge(int x, int y) - Code Requirement 5
 
-  - For judgeing if their is five in a row
+- Judge win or not - Code Requirement 5
+
+  - For judging if their are five in a row
   - Input are the x and y coordinated of where the go is placed
   - Outputs whether win or not
-  
-- bool judge_horizontal(int x, int y)
 
-   - Helper function for the judge function, see if five in a row in the horizontal direction
-   - Input are the x and y coordinated of where the go is placed
-   - Outputs whether their is five in a row
-		
-- bool judge_vertical(int x, int y)
 
-    - Helper function for the judge function, see if five in a row in the vertical direction
-    - Input are the x and y coordinated of where the go is placed
-    - Outputs whether their is five in a row
-		
-- bool judge_diagonal(int x, int y)
 
-    - Helper function for the judge function, see if five in a row in the diagonal direction
-    - Input are the x and y coordinated of where the go is placed
-    - Outputs whether their is five in a row
-  
-- bool switch_go(char **gameBoard , int width , int height , const Player player1 , const Player player2 ) - Code Requirement 5
+- Heartbeat time: switch go - Code Requirement 5
 
-  - Switches two go that are of different kinds
-  - input: gameboard, size of the gameboard, the players information 
-  - output boolean value true: after switch the game over, win or tie; False: after switch the game continue.
+  - Switches two go that are of different kinds after every 10 rounds
 
-- void save_game() - Code Requirement 4 & 5
+
+- Save game - Code Requirement 4 & 5
 
   - save the current state of the board to a text file
-	
-- void load_game() - Code Requirement 4 & 5
+  - Save the player datas into a text file
+
+
+- Load game - Code Requirement 4 & 5
 
   - load the board data in the text file into the current board
-
-
-
+  - load the player data in the test file into the current players variable
