@@ -10,6 +10,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <limits>
+#include <utility>
 
 using namespace std;
 

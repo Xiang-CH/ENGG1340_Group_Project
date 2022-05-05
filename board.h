@@ -2,6 +2,7 @@
 #ifndef board_h
 #define board_h
 #include <iostream>
+#include <limits>
 #include <cstdlib>//rand number generate 
 #include <ctime>//call current use for srand()
 

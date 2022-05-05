@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <limits>
 
 const char File_Name[19] = "last_game_data.txt";  //global constant for the name of the status file
 

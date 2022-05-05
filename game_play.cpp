@@ -1,7 +1,6 @@
 //game_play.cpp
 #include "game_play.h"
 
-#include <utility>
 
 //Function: add the name of two players
 //Input: two structs players, player1 and player2(pass by reference).
