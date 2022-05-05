@@ -73,7 +73,7 @@ void load_game(Player& current_player, Player &p1, Player &p2, char ** gameBoard
 
 bool get_board_dimension(int &w, int &h){
     ifstream fin (File_Name);
-    if (fin.fail()) {
+    if (fin.fail() or fin.peek() == ifstream::traits_type::eof()) {
         cout << "Failed to load progress. Starting a New Game Instead!!" << endl;
         return true;
     }
