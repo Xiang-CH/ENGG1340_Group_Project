@@ -7,6 +7,8 @@ Team members:
 
 **important**: The random seed in the program is currently set to a fixed seed for accuracy of the sample input/output file. If you desire a more random game please follow the instructions under global seed part in "board.h" and "game_play.h" (uncomment a line of code).  
 
+Sample input/output files tested on Academy 11
+
 <br />
 
 ## Project Proposal
@@ -15,7 +17,6 @@ Our project creates an abbreviated version of goBang game (five in a row), for t
 
 Demo Video: https://connecthkuhk-my.sharepoint.com/:v:/g/personal/cxiang_connect_hku_hk/EXIIh-GB1aNMvIvUcBjaIDoB_hQ8frl4nYsu-wd08foXuA?e=tJgWdt
 
-Tested on Academy 21
 
 <br />
 
