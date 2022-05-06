@@ -93,7 +93,7 @@ Which will also make this chess game more 'balance' to some extent.
 ## Sample TestCases
 - Test case 1
   - Create a new game
-  - board width 6 , board height 6 
+  - board width 5 , board height 5 
   - A player win 
   - delete the last play file 
 - Test case 2 
