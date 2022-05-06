@@ -3,266 +3,228 @@ Heart Beat Go Bang
 1. New game
 2. Load previous game
 -------------------------
-Please select (1 or 2):
-Please enter the desired board width (5 - 20):
-Please enter the desired board height (5 - 20):
-Please enter a valid height (5 - 20):
-Player 1: please enter your preferred name:
-Player 2: please enter your preferred name:
-
-Number guess time!!!
+Please select (1 or 2): Please enter the desired board width (5 - 20): Please enter the desired board height (5 - 20): Please enter a valid height (5 - 20): Player 1: please enter your preferred name: Player 2: please enter your preferred name: 
+Number guess time!!! 
 Who ever guesses a number closer to the random number ranging from 0 to 99 will go first
-testplayer1 please enter a number between 0 to 99:
-Please enter a valid number (0-99):
-testplayer2 please enter a number between 0 to 99:
- please enter a valid number (0-99):
-testplayer2 plays first with the go: O
+testplayer1 please enter a number between 0 to 99: Please enter a valid number (0-99): testplayer2 please enter a number between 0 to 99:  please enter a valid number (0-99): testplayer2 plays first with the go: O
 
 ---------------------------------------------
 The game starts now
- x  0   1   2   3   4   5   6
+ x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   _   _   _
+0   _   _   _   _   _   _   _   
 
-1   _   _   _   X   X   _   _
+1   _   _   _   X   X   _   _   
 
-2   _   _   _   _   _   O   _
+2   _   _   _   _   _   O   _   
 
-3   _   _   _   _   _   _   _
+3   _   _   _   _   _   _   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer2's round, please place go (O)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   _   _   _
+0   _   _   _   _   _   _   _   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   _   O   _
+2   _   _   _   _   _   O   _   
 
-3   _   _   _   _   _   _   _
+3   _   _   _   _   _   _   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer1's round, please place go (X)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
-This position is occupied
-Enter x coordinate:
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate: This position is occupied
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   _   _   _
+0   _   _   _   _   _   _   _   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   X   O   _
+2   _   _   _   _   X   O   _   
 
-3   _   _   _   _   _   _   _
+3   _   _   _   _   _   _   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer2's round, please place go (O)
 Enter -1 to save game
-Enter x coordinate:
-please enter a valid int：
-Enter y coordinate:
-Please enter a valid int：
-x  0   1   2   3   4   5   6
+Enter x coordinate: please enter a valid int： Enter y coordinate: Please enter a valid int：  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   _   _   O
+0   _   _   _   _   _   _   O   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   X   O   _
+2   _   _   _   _   X   O   _   
 
-3   _   _   _   _   _   _   _
+3   _   _   _   _   _   _   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer1's round, please place go (X)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   X   _   O
+0   _   _   _   _   X   _   O   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   X   O   _
+2   _   _   _   _   X   O   _   
 
-3   _   _   _   _   _   _   _
+3   _   _   _   _   _   _   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer2's round, please place go (O)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   X   _   O
+0   _   _   _   _   X   _   O   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   X   O   _
+2   _   _   _   _   X   O   _   
 
-3   _   _   _   _   _   O   _
+3   _   _   _   _   _   O   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer1's round, please place go (X)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   X   _   O
+0   _   _   _   _   X   _   O   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   X   O   _
+2   _   _   _   _   X   O   _   
 
-3   _   _   _   _   X   O   _
+3   _   _   _   _   X   O   _   
 
-4   _   _   _   _   _   _   _
+4   _   _   _   _   _   _   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer2's round, please place go (O)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   X   _   O
+0   _   _   _   _   X   _   O   
 
-1   _   _   _   X   X   O   _
+1   _   _   _   X   X   O   _   
 
-2   _   _   _   _   X   O   _
+2   _   _   _   _   X   O   _   
 
-3   _   _   _   _   X   O   _
+3   _   _   _   _   X   O   _   
 
-4   _   _   _   _   _   O   _
+4   _   _   _   _   _   O   _   
 
-5   _   _   _   _   _   _   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 Heartbeat time!
 one of each player's go will switch automatically
- x  0   1   2   3   4   5   6
+ x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   X   _   O
+0   _   _   _   _   X   _   O   
 
-1   _   _   _   X   X   X   _
-
-2   _   _   _   _   O   O   _
-
-3   _   _   _   _   X   O   _
-
-4   _   _   _   _   _   O   _
-
-5   _   _   _   _   _   _   _
-
-6   _   _   _   _   _   _   _
-
-testplayer1's round, please place go (X)
-Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
-y
-0   _   _   _   _   X   _   O
-
-1   _   _   _   X   X   X   X
-
-2   _   _   _   _   O   O   _
-
-3   _   _   _   _   X   O   _
-
-4   _   _   _   _   _   O   _
-
-5   _   _   _   _   _   _   _
-
-6   _   _   _   _   _   _   _
-
-testplayer2's round, please place go (O)
-Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
-This position is occupied
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
-y
-0   _   _   _   _   X   _   O
-
-1   _   _   _   X   X   X   X
+1   _   _   _   X   X   X   _   
 
 2   _   _   _   _   O   O   _   
 
-3   _   _   _   _   X   O   _
+3   _   _   _   _   X   O   _   
 
-4   _   _   _   _   _   O   _
+4   _   _   _   _   _   O   _   
 
-5   _   _   _   _   _   O   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
 
 testplayer1's round, please place go (X)
 Enter -1 to save game
-Enter x coordinate:
-Enter y coordinate:
- x  0   1   2   3   4   5   6
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
 y
-0   _   _   _   _   X   _   O
+0   _   _   _   _   X   _   O   
 
-1   _   _   X   X   X   X   X
+1   _   _   _   X   X   X   X   
 
-2   _   _   _   _   O   O   _
+2   _   _   _   _   O   O   _   
 
-3   _   _   _   _   X   O   _
+3   _   _   _   _   X   O   _   
 
-4   _   _   _   _   _   O   _
+4   _   _   _   _   _   O   _   
 
-5   _   _   _   _   _   O   _
+5   _   _   _   _   _   _   _   
 
-6   _   _   _   _   _   _   _
+6   _   _   _   _   _   _   _   
+
+testplayer2's round, please place go (O)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate: This position is occupied
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
+y
+0   _   _   _   _   X   _   O   
+
+1   _   _   _   X   X   X   X   
+
+2   _   _   _   _   O   O   _   
+
+3   _   _   _   _   X   O   _   
+
+4   _   _   _   _   _   O   _   
+
+5   _   _   _   _   _   O   _   
+
+6   _   _   _   _   _   _   _   
+
+testplayer1's round, please place go (X)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   5   6   
+y
+0   _   _   _   _   X   _   O   
+
+1   _   _   X   X   X   X   X   
+
+2   _   _   _   _   O   O   _   
+
+3   _   _   _   _   X   O   _   
+
+4   _   _   _   _   _   O   _   
+
+5   _   _   _   _   _   O   _   
+
+6   _   _   _   _   _   _   _   
 testplayer1 Won!
 This round of game is over
-Do you want to delete the previously saved checkpoint? (Y/N):
-Previous checkpoint deleted
+Do you want to delete the previously saved checkpoint? (Y/N): Previous checkpoint deleted
 Game end
