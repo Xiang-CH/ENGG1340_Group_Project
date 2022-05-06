@@ -1,0 +1,111 @@
+Heart Beat Go Bang
+---------Menu------------
+1. New game
+2. Load previous game
+-------------------------
+Please select (1 or 2): Please enter the desired board width (5 - 20): Please enter the desired board height (5 - 20): Player 1: please enter your preferred name: Player 2: please enter your preferred name: 
+Number guess time!!! 
+Who ever guesses a number closer to the random number ranging from 0 to 99 will go first
+lin please enter a number between 0 to 99: xiang please enter a number between 0 to 99: xiang plays first with the go: O
+
+---------------------------------------------
+The game starts now
+ x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   _   _   _   _   
+
+3   X   X   _   _   _   
+
+4   _   _   _   _   _   
+
+xiang's round, please place go (O)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   O   _   _   _   
+
+3   X   X   _   _   _   
+
+4   _   _   _   _   _   
+
+lin's round, please place go (X)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   O   _   _   _   
+
+3   X   X   X   _   _   
+
+4   _   _   _   _   _   
+
+xiang's round, please place go (O)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   O   O   _   _   
+
+3   X   X   X   _   _   
+
+4   _   _   _   _   _   
+
+lin's round, please place go (X)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   O   O   _   _   
+
+3   X   X   X   X   _   
+
+4   _   _   _   _   _   
+
+xiang's round, please place go (O)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   O   O   O   _   
+
+3   X   X   X   X   _   
+
+4   _   _   _   _   _   
+
+lin's round, please place go (X)
+Enter -1 to save game
+Enter x coordinate: Enter y coordinate:  x  0   1   2   3   4   
+y
+0   _   _   _   _   _   
+
+1   _   _   _   _   _   
+
+2   O   O   O   O   _   
+
+3   X   X   X   X   X   
+
+4   _   _   _   _   _   
+lin Won!
+This round of game is over
+Do you want to delete the previously saved checkpoint? (Y/N): Previous checkpoint deleted
+Game end
