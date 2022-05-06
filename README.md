@@ -85,3 +85,9 @@ Which will also make this chess game more 'balance' to some extent.
 
   - load the board data in the text file into the current board
   - load the player data in the test file into the current players variable
+
+
+
+
+## Sample TestCases
+
